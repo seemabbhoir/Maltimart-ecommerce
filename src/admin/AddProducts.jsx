@@ -19,7 +19,7 @@ const AddProducts = () => {
 
   const addProduct = async (e) => {
     e.preventDefault();
-    setLoading(true);
+    setLoading(false);
 
     //add product to firebase
     try {
@@ -49,7 +49,7 @@ const AddProducts = () => {
         }
       );
 
-      setLoading(true);
+      setLoading(false);
       toast.success("product successfully added");
       navigate("/dashboard/all-products");
     } catch (err) {

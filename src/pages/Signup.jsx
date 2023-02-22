@@ -54,7 +54,7 @@ const Signup = () => {
             //store user profile firestore database
 
             await setDoc(doc(db, "users", user.uid), {
-              uis: user.uid,
+              uid: user.uid,
               displayName: username,
               email,
               photoURL: downloadURL,
